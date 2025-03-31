@@ -1,0 +1,71 @@
+{
+    "projects": [
+        {
+            "project_name":"Checkers Library", 
+            "release_date":"2022-07-22", 
+            "languages":"C#, .NET", 
+            "tags":"P", 
+            "link":"", 
+            "img":"", 
+            "comments":"This is a project that creates a fully playable game of checkers on the windows command line, with saving, loading, move calculation, and error handling. I have not released it as the code is still valuable, but a release of the project is available upon request."
+        },
+        {"project_name":"Xamarin Mobile Development", 
+            "release_date":"2022-07-26", 
+            "languages":"C#, .NET, Xamarin.Forms (Now MAUI applications)", 
+            "tags":"P", 
+            "link":"", 
+            "img":"", 
+            "comments":"An attempt to develop mobile applicaiton using Microsoft's Xamarin.FORMS library. Created basic text entry, sensor, and system call apps."
+        },
+        {"project_name":"A Child in the Stars", 
+            "release_date":"2024-09-07", 
+            "languages":"GDScript", 
+            "tags":"P", 
+            "link":"", 
+            "img":"", 
+            "comments":"This was an unfinished game development project in collaboration with the amazing <link>! She did the art, and I did the programming. The game used complex physics systems, alternative coordinates, and roundabout mechanics that were out of scope. All artwork was done by KY, but I wrote the entire codebase by hand."
+        },
+        {"project_name":"CSS Web Design", 
+            "release_date":"2025-03-30", 
+            "languages":"HTML, CSS, Javascript", 
+            "tags":"P", 
+            "link":"", 
+            "img":"", 
+            "comments":"This site! I built it by hand after a lot of research on web design."
+        },
+        {"project_name":"Algorithms Implementation", 
+            "release_date":"2025-03-12", 
+            "languages":"C#, .NET", 
+            "tags":"S", 
+            "link":"", 
+            "img":"", 
+            "comments":"During my algorithms class, an extra credit assignment was to implement any algorithms covered in class. I jumped on this as a challenge during the last day to see what I could get done in six hours, and was impressed with the results."
+        },
+        {
+            "project_name":"Dominion Implementation", 
+            "release_date":"2024-16-12", 
+            "languages":"C#, .NET", "tags":"S", 
+            "link":"", 
+            "img":"", 
+            "comments":"I enjoy the board game 'Dominion' a lot. During the last quarter of my concepts programming class, I decided to take on implementing it for extra credit, in rust, an unfamiliar language at the time. This was the product of around seven days of pure code-writing. It is also my best work so far."
+        },
+        {
+            "project_name":"HMobile Robot Control application", 
+            "release_date":"2025-05-01", 
+            "languages":"Kotlin, Java, Python, ROS2, ", "tags":"S", 
+            "link":"", 
+            "img":"", 
+            "comments":"Creating a mobile application to control a robot using ROS2, Jetpack Compose, and Android."
+        },
+        {
+            "project_name":"Graph Analyzer", 
+            "release_date":"2025-03-09", 
+            "languages":"Java, Swing UI", "tags":"S", 
+            "link":"", 
+            "img":"", 
+            "comments":"Group project where we created a graph and calculated several properties, such as centrality, distance, and spanning tree."
+        }
+    ]
+}
+
+
