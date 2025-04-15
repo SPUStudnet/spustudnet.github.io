@@ -1,0 +1,121 @@
+
+@layer reset, theme, global, layout, modules, utility;
+
+@layer reset {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: unset;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+        font: inherit;
+    }
+
+    img,
+    picture,
+    svg,
+    canvas {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+}
+
+@layer theme {
+
+}
+
+@layer modules {
+
+    .about-grid {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .top {
+        grid-area: top;
+    }
+
+    .middle {
+        grid-area: middle;
+    }
+
+    .last {
+        grid-area: last;
+    }
+
+    .about-paragraph {
+        float: left;
+        clear: left;
+
+
+        
+        margin-left: 2em;
+        padding: 30px;
+        padding-top: 3px;
+        padding-bottom: 10px;
+        background-color: rgba(0,0,0,0.6);
+        border: 2px solid rgba(160, 162, 186, 1);
+        border-radius: 40px;
+
+        
+
+        width: 70rem;
+    }
+
+    .about-paragaph > p {
+        line-height: 2.7em;
+
+    }
+
+    .about-paragraph .last {
+        margin-inline-end: 4em;
+        padding-bottom: 1em;
+        margin-bottom: 4em;
+    }
+
+    .about-grid > * + * {
+        margin-block-start: 1.5em;
+    }
+
+    .about-paragraph h3 {
+        font-size: 2.5em;
+    }
+
+    .about-paragraph p {
+        font-size: 1.2em;
+
+    }
+}
+
+@layer utilites {
+    .about-link {
+        color: aqua;
+        text-decoration: none;
+    }
+
+    .about-link:hover {
+        color: darkcyan
+    }
+}

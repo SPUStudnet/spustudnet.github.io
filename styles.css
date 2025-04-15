@@ -56,6 +56,21 @@ Go read his book, it's good.
         font-family: Arial, Helvetica, sans-serif;
 
     }
+
+    .bg-img {
+        margin: 0;
+        padding: 0;
+        animation-name: gradient-fade;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+
+        --background-gradient: radial-gradient(circle var(--pos-scale) at 50% 100%, oklch(0.83 0.1505 205.41), black 150%);
+        background-image: var(--background-gradient);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        min-height: 100%;
+    }
 }
 
 @layer global {
@@ -76,52 +91,125 @@ Go read his book, it's good.
             --pos-scale: 80vh;
         };
     }
-
-    .bg-img {
-        animation-name: gradient-fade;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-
-        --background-gradient: radial-gradient(circle var(--pos-scale) at 50% 100%, oklch(0.83 0.1505 205.41), black 150%);
-        background-image: var(--background-gradient);
-        height: 100%;
+    
+    footer {
+        text-align: center;
+        padding: 1em;
+        background-color: black;
         background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+        background-image: linear-gradient(#222222 #000000)
     }
 }
 
 @layer layout {
     .center-delta-text {
-        padding: 3em 2em;
+        padding-top: 1.2em;
+        padding-bottom: 0.4em;
         text-align: center;
-        font-size: 3.4em;
+        font-size: 6em;
+        margin: 0;
+
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 0 auto;
+        text-shadow: #000000A0 1px -1px;
+        animation:
+            typing 3.5s steps(80, end);
+
+            
     }
 
-    .no-margin {
-        margin: 0;
+    @keyframes typing {
+        from {width: 0}
+        to {width: 100%}
     }
     
     .box-text {
+        margin: 0;
         text-align: center;
         font-size: 2em;
         padding-left: 10%;
         padding-right: 10%;
-        text-shadow: #00000090 0.1em 0.1em;
+        text-shadow: #00000090 1px -1px;
     }
 
     .projects-grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(4, auto);
+        gap: 2em;
+        padding: 30px;
 
+    }
+
+    @keyframes hop-up {
+        0% {
+            transform: translate(0);
+        }
+        100% {
+            transform: translate(0, -10px);
+        }
+    }
+
+    .project-card:hover {
+        animation: hop-up 0.2s linear 1;
+        transform: translate(0, -10px);
+    }
+
+    .project-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-card > a {
+        margin-top: auto;
+    }
+
+    .project-card > img {
+        max-height: 300px;
+    }
+
+    @media (max-width: 400px) {
+        .center-delta-text {
+            font-size: 2.3em;
+        }
+
+        .box-text {
+            font-size: 1.3em;
+
+            border-style: solid;
+            border-bottom: 10em #000;
+        }
+        
     }
 }
 
 @layer modules {
 
+    .written-segment {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .written-segment p {
+        margin-top: 3em;
+        text-align: center;
+        max-width: 1080px;
+        font-size: 1.2em;
+        text-shadow: #00000090 1px -1px;
+    }
+    
+    .written-segment a {
+        text-decoration: underline;
+        color:white;
+    }
+
+    .written-segment a:hover {
+        color: darkcyan;
+    }
+
     .project-card {
-        max-inline-size: 300px;
         padding: 0.5em;
         margin-inline: auto;
         background-color: rgb(39, 38, 38);
@@ -132,10 +220,22 @@ Go read his book, it's good.
 
     .project-card > h4 {
         padding: 0.1em;
+        font-size: 1.4em;
     }
 
     .project-card > p {
         padding: 0.1em;
+    }
+
+    .project-card > a {
+        text-decoration: none;
+        color: cyan;
+    }
+
+    .proj-p {
+        font-size: 1.2em;
+        padding: 0.4em;
+        line-height: 1.3em;
     }
 
     .navigation {
@@ -263,8 +363,4 @@ Go read his book, it's good.
 }
 
 @layer utilities {
-    #resume-link {
-        color: aqua;
-        text-decoration: none;
-    }
 }
