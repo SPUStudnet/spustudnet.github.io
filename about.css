@@ -79,10 +79,19 @@
         border: 2px solid rgba(160, 162, 186, 1);
         border-radius: 40px;
 
-        
+        max-width: 70rem;
 
-        width: 70rem;
     }
+
+
+    @media (max-width: 500px) {
+        .about-paragraph {
+            margin-left: 13px;
+            margin-right: 13px;
+        }
+        
+    }
+        
 
     .about-paragaph > p {
         line-height: 2.7em;
